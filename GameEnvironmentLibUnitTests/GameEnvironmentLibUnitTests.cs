@@ -5,7 +5,7 @@ namespace GameEnvironmentLibUnitTests
         // Creating a universal items
         static byte size = 4;
         static char emptyBoardCharacter = '-';
-        private TicTacToe game = new TicTacToe(boardSize: size);
+        private TicTacToe game = new TicTacToe(sizeOfBoard: size);
 
         [Fact]
         public void TestInitialPlayers()

@@ -6,11 +6,12 @@ namespace GamePlay
     {
         public static void NextIteration(TicTacToe game)
         {
+            // Displaying the current game player
+            Console.WriteLine($"Current Player: {game.CurrentPlayer}");
             // Making a Random Move
             game.MakeRandomMove();
             // Dsiplaying game Board
             Console.WriteLine($"Game Board Position:\n{game.DisplayBoard()}");
-            // Displaying the current game player
             // Displaying the game state
             Console.WriteLine($"Continue Playing Game: {game.ContinueGamePlay}");
         }
@@ -42,18 +43,14 @@ namespace GamePlay
                 }
             }
             // Creating an instance of the Tic Tac Toe game
-            TicTacToe game = new TicTacToe(boardSize: size);
+            TicTacToe game = new TicTacToe(sizeOfBoard: size);
             Console.WriteLine($"Displaying the Initial board position:\n{game.DisplayBoard()}");
 
-            while (game.ContinueGamePlay)
+            while (game.ContinueGamePlay) 
             {
-                //// Finding current player
-                //char currentPlayer = game.CurrentPlayer;
-                //Console.WriteLine($"Current Player: {currentPlayer}");
-                //break;
-                Console.WriteLine($"Current Player: {game.CurrentPlayer}");
-                NextIteration(game);
+                NextIteration(game); 
             }
+            
             if (game.GameWin)
             {
                 Console.WriteLine($"Congrats, Player {game.WinningPlayer} won the game");
@@ -62,12 +59,6 @@ namespace GamePlay
             {
                 Console.WriteLine($"The Game is draw");
             }
-            /*            NextIteration(game);
-                        NextIteration(game);*/
-            //game.checkHorizontalPosition();
-            //game.checkVerticalPosition();
-            //game.checkbackslashDiagonalPosition();
-            //game.checkforwardslashDiagonalPosition();
         }
     }
 }
