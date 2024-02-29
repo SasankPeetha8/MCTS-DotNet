@@ -128,9 +128,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\MCTS.csproj",
-      "projectName": "MCTS",
-      "projectPath": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\MCTS.csproj",
+      "projectUniqueName": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\GamePlay.csproj",
+      "projectName": "GamePlay",
+      "projectPath": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\GamePlay.csproj",
       "packagesPath": "C:\\Users\\Sasan\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\obj\\",
       "projectStyle": "PackageReference",

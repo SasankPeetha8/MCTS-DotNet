@@ -1,5 +1,6 @@
 ﻿using GameEnvironment;
-namespace MCTS
+
+namespace GamePlay
 {
     internal class Program
     {
@@ -10,9 +11,8 @@ namespace MCTS
             // Dsiplaying game Board
             Console.WriteLine($"Game Board Position:\n{game.DisplayBoard()}");
             // Displaying the current game player
-            Console.WriteLine($"Current Player: {game.CurrentPlayer}");
             // Displaying the game state
-            Console.WriteLine($"Game Over: {game.IsGameOver}");
+            Console.WriteLine($"Continue Playing Game: {game.ContinueGamePlay}");
         }
 
         static void Main(string[] args)
@@ -44,19 +44,30 @@ namespace MCTS
             // Creating an instance of the Tic Tac Toe game
             TicTacToe game = new TicTacToe(boardSize: size);
             Console.WriteLine($"Displaying the Initial board position:\n{game.DisplayBoard()}");
-            /*while (game.IsGameOver)
+
+            while (game.ContinueGamePlay)
             {
                 //// Finding current player
                 //char currentPlayer = game.CurrentPlayer;
                 //Console.WriteLine($"Current Player: {currentPlayer}");
-                //Console.WriteLine($"Game Over: {game.IsGameOver}");
                 //break;
+                Console.WriteLine($"Current Player: {game.CurrentPlayer}");
                 NextIteration(game);
-            }*/
-            NextIteration(game);
-            NextIteration(game);
-
-
+            }
+            if (game.GameWin)
+            {
+                Console.WriteLine($"Congrats, Player {game.WinningPlayer} won the game");
+            }
+            else if (!game.GameDraw)
+            {
+                Console.WriteLine($"The Game is draw");
+            }
+            /*            NextIteration(game);
+                        NextIteration(game);*/
+            //game.checkHorizontalPosition();
+            //game.checkVerticalPosition();
+            //game.checkbackslashDiagonalPosition();
+            //game.checkforwardslashDiagonalPosition();
         }
     }
 }

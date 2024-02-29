@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCTS", "MCTS.csproj", "{E31CEA1E-FB8B-4488-AC25-5C83E345C774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamePlay", "GamePlay.csproj", "{E31CEA1E-FB8B-4488-AC25-5C83E345C774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEnvironment", "..\GameEnvironment\GameEnvironment.csproj", "{08FFC8CB-E200-4299-9911-3C9FE34BC9E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameEnvironment", "..\GameEnvironment\GameEnvironment.csproj", "{08FFC8CB-E200-4299-9911-3C9FE34BC9E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEnvironmentLibUnitTests", "..\GameEnvironmentLibUnitTests\GameEnvironmentLibUnitTests.csproj", "{A24F0C7A-0E04-46F6-B259-902039B47258}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{08FFC8CB-E200-4299-9911-3C9FE34BC9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08FFC8CB-E200-4299-9911-3C9FE34BC9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08FFC8CB-E200-4299-9911-3C9FE34BC9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A24F0C7A-0E04-46F6-B259-902039B47258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24F0C7A-0E04-46F6-B259-902039B47258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24F0C7A-0E04-46F6-B259-902039B47258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24F0C7A-0E04-46F6-B259-902039B47258}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

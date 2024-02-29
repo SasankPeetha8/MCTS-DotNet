@@ -7,12 +7,11 @@ namespace GameEnvironment
     {
         // Defining fields
         byte BoardSize;
-        //char[,] BoardPositions;
-        /*private char[] boardPositions;*/
+        // Defining boardPositions
         char[,] boardPositions;
         // Defining players
-        char Player1;
-        char Player2;
+        public char Player1;
+        public char Player2;
         // Empty board character
         private char boardCharacter = '-';
 
@@ -24,7 +23,7 @@ namespace GameEnvironment
             BoardSize = boardSize;
             // Creating the board and filling initial values
             boardPositions = new char[boardSize, boardSize];
-
+            // Iterating through the 2D array.
             for (int i = 0; i < boardSize; i++)
             {
                 for (int j = 0; j < boardSize; j++)
@@ -32,13 +31,12 @@ namespace GameEnvironment
                     boardPositions[i,j] = '-';
                 }
             }
-
-            /*Array.Fill<char>(array: boardPositions, value: boardCharacter);*/
             // Defining players
             Player1 = playerOne;
             Player2 = playerTwo;
         }
 
+        // Defining Property for the BoardPositions
         public char[,] BoardPositions
         {
             get { return boardPositions; }
@@ -55,32 +53,32 @@ namespace GameEnvironment
             }
         }
 
-        /*public string DisplayBoard()
-        {
-            // Building the string
-            string boardString = string.Empty;
-            for (byte i = 0; i < BoardPositions.Length; i++)
-            {
-                boardString = boardString + boardPositions[i] + (((i+1) % BoardSize == 0) ? "\n" : " ");
-                //boardString = boardString + BoardPositions[i];
-
-            }
-            return boardString;
-        }*/
-
         public string DisplayBoard()
         {
             // Building the string
             string boardString = "";
-            for (int i = 0; i < BoardPositions.GetLength(0); i++)
+            byte counter = 0;
+            foreach (char element in boardPositions)
             {
-                for(int j = 0;j < BoardPositions.GetLength(1); j++)
+                boardString = boardString + element + " ";
+                counter++;
+                if (counter == BoardSize)
                 {
-                    boardString = boardString + BoardPositions[i,j] + " ";
+                    boardString += "\n";
+                    counter = 0;
                 }
-                boardString = boardString + "\n";
+
             }
             return boardString;
+        }
+
+        // Defining method to check who is the previous player
+        public char WinningPlayer
+        {
+            get
+            {
+                return CurrentPlayer == Player1 ? Player2 : Player1;
+            }
         }
 
         // Defining method to check which player to make their move
@@ -90,21 +88,17 @@ namespace GameEnvironment
             {
                 byte playerOnePositions = 0;
                 byte playerTwoPositions = 0;
-                for (int i = 0; i < BoardPositions.GetLength(0); i++)
+                foreach(char element in boardPositions)
                 {
-                    for (int j = 0; j < BoardPositions.GetLength(1); j++)
+                    if (element == Player1)
                     {
-                        if (BoardPositions[i,j] == Player1)
-                        {
-                            playerOnePositions++;
-                        }
-                        else if (BoardPositions[i,j] == Player2)
-                        {
-                            playerTwoPositions++;
-                        }
+                        playerOnePositions++;
+                    }
+                    else if (element == Player2)
+                    {
+                        playerTwoPositions++;
                     }
                 }
-
                 if (playerOnePositions == playerTwoPositions)
                 {
                     return Player1;
@@ -153,34 +147,134 @@ namespace GameEnvironment
                 }
             }
             return positionsAvailable;
-
-            /*List<byte> emptyPositions = new List<byte>();
-            foreach (char element in BoardPositions)
-                for (byte i = 0; i < BoardPositions.Length; i++)
-                {
-                    if (BoardPositions[i] == boardCharacter)
-                    {
-                        emptyPositions.Add(i);
-                    }
-                }
-            return emptyPositions.ToArray();*/
         }
 
-        // Defining method to check if the game is over of not
-        public bool IsGameOver
+        // Defining method to check if the game is draw or not
+        public bool GameDraw
         {
             get
             {
-                string availablePositions = BoardPositions.ToString();
-                return availablePositions.Contains(boardCharacter);
+                if (GameWin)
+                {
+                    return false;
+                }
+                else
+                {
+                    string availablePositions = DisplayBoard();
+                    return !availablePositions.Contains(boardCharacter);
+                }
+
             }
         }
 
-        // Defining the game win state
-        public bool GameWin()
+        public bool ContinueGamePlay
         {
+            get
+            {
+                return !GameWin && !GameDraw;
+            }
+        }
 
-            return true;
+        // Defining method to check if the string is winning or not
+        public bool ValidateString(string positions)
+        {
+            string checkPlayerOne = positions.Replace(Player1, ' ').Trim();
+            string checkPlayerTwo = positions.Replace(Player2, ' ').Trim();
+            if (checkPlayerOne.Length == 0)
+            {
+                return true;
+            }
+            else if (checkPlayerTwo.Length == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public bool checkHorizontalPosition()
+        {
+            int[] values = new int[BoardSize];
+            string displayValues = "";
+            for (byte i = 0; i < BoardPositions.GetLength(0); i++)
+            {
+                for (byte j = 0; j < BoardPositions.GetLength(1); j++)
+                {
+                    displayValues = displayValues + $"{BoardPositions[i,j]}";
+                }
+                //Console.WriteLine($"Row {i}: {displayValues} - {ValidateString(displayValues)}");
+                if (ValidateString(displayValues))
+                {
+                    return true;
+                }
+                displayValues = "";
+            }
+            return false;
+        }
+
+        public bool checkVerticalPosition()
+        {
+            string displayValues = "";
+            for (byte j = 0; j < BoardPositions.GetLength(1); j++)
+            {
+                for (byte i = 0; i < BoardPositions.GetLength(0); i++)
+                {
+                    displayValues = displayValues + $"{BoardPositions[i,j]}";
+                }
+                //Console.WriteLine($"Column {j}: {displayValues} - {ValidateString(displayValues)}");
+                if (ValidateString(displayValues) )
+                {
+                    return true;
+                }
+                displayValues = "";
+            }
+            return false;
+        }
+
+        public bool checkbackslashDiagonalPosition()
+        {
+            byte i;
+            byte j;
+            string displayValues = "";
+            for ( i = j = 0; i < BoardPositions.GetLength(0); i++, j++)
+            {
+                displayValues = displayValues + $"{BoardPositions[i, j]}";
+            }
+            //Console.WriteLine($"Backslash Diagonal: {displayValues} - {ValidateString(displayValues)}");
+            if (ValidateString(displayValues))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        public bool checkforwardslashDiagonalPosition()
+        {
+            byte i = 0;
+            byte j = BoardSize;
+            string displayValues = "";
+            for (j--; i < BoardPositions.GetLength(0); i++, j--)
+            {
+                displayValues = displayValues + $"{BoardPositions[i, j]}";
+            }
+            //Console.WriteLine($"Forwardslash Diagonal: {displayValues} - {ValidateString(displayValues)}");
+            if (ValidateString(displayValues))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        // Defining the game win state
+        public bool GameWin
+        {
+            get
+            {
+                return (checkHorizontalPosition() || checkVerticalPosition() || checkforwardslashDiagonalPosition() || checkbackslashDiagonalPosition());
+            }
         }
     }
 }

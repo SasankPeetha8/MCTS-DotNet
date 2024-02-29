@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MCTS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adcf174a84f6d0c1eff49e451161311af942afae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04b54ebcf74783aed3c4ed420fcd63c77f19b755")]
 [assembly: System.Reflection.AssemblyProductAttribute("MCTS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MCTS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
