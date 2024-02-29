@@ -1,0 +1,12 @@
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\bin\Debug\net8.0\GameEnvironment.deps.json
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\bin\Debug\net8.0\GameEnvironment.dll
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\bin\Debug\net8.0\GameEnvironment.pdb
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\GameEnvironment.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\GameEnvironment.AssemblyInfoInputs.cache
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\GameEnvironment.AssemblyInfo.cs
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\GameEnvironment.csproj.CoreCompileInputs.cache
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\GameEnvironment.sourcelink.json
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\GameEnvironment.dll
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\refint\GameEnvironment.dll
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\GameEnvironment.pdb
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironment\obj\Debug\net8.0\ref\GameEnvironment.dll
