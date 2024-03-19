@@ -9,6 +9,7 @@
       "GamePlay/1.0.0": {
         "dependencies": {
           "GameEnvironment": "1.0.0",
+          "MCTSLib": "1.0.0",
           "Microsoft.DotNet.ILCompiler": "8.0.0",
           "Microsoft.NET.ILLink.Tasks": "8.0.0"
         },
@@ -21,6 +22,14 @@
       "GameEnvironment/1.0.0": {
         "runtime": {
           "GameEnvironment.dll": {}
+        }
+      },
+      "MCTSLib/1.0.0": {
+        "dependencies": {
+          "GameEnvironment": "1.0.0"
+        },
+        "runtime": {
+          "MCTSLib.dll": {}
         }
       }
     }
@@ -46,6 +55,11 @@
       "hashPath": "microsoft.net.illink.tasks.8.0.0.nupkg.sha512"
     },
     "GameEnvironment/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MCTSLib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

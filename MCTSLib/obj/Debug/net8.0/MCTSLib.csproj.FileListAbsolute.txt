@@ -1,0 +1,16 @@
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\bin\Debug\net8.0\MCTSLib.deps.json
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\bin\Debug\net8.0\MCTSLib.dll
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\bin\Debug\net8.0\MCTSLib.pdb
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\bin\Debug\net8.0\GameEnvironment.dll
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\bin\Debug\net8.0\GameEnvironment.pdb
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.csproj.AssemblyReference.cache
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.AssemblyInfoInputs.cache
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.AssemblyInfo.cs
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.csproj.CoreCompileInputs.cache
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.sourcelink.json
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.csproj.CopyComplete
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.dll
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\refint\MCTSLib.dll
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.pdb
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\ref\MCTSLib.dll

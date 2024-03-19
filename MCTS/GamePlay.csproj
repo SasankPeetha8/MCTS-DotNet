@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GameEnvironment\GameEnvironment.csproj" />
+    <ProjectReference Include="..\MCTSLib\MCTSLib.csproj" />
   </ItemGroup>
 
 </Project>

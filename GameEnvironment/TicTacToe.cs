@@ -85,6 +85,26 @@ namespace GameEnvironment
             return boardString;
         }
 
+        // Displaying board positions
+        public string DisplayBoard(char[,] positionsOnBoard)
+        {
+            // Defining the empty string
+            string boardPositions = "";
+            // Iterating throught the 2D array
+            for (int i = 0; i < positionsOnBoard.GetLength(0); i++)
+            {
+                for (int j = 0; j < positionsOnBoard.GetLength(1); j++)
+                {
+                    boardPositions = boardPositions + $"{positionsOnBoard[i, j]}" + " ";
+                }
+                // Adding new line
+                boardPositions = boardPositions + "\n";
+            }
+            // returning the string
+            return boardPositions;
+
+        }
+
         /// <summary>
         /// This property is used to display the player who has won the game.
         /// </summary>
@@ -129,6 +149,26 @@ namespace GameEnvironment
             return positionsAvailable[randomPosition];
         }
 
+        public int PossibleRandomMoves(char[,] positionsOfBoard)
+        {
+            // Fetching the size of the array
+            int boardSize = positionsOfBoard.GetLength(0);
+            // Declaring the element count
+            int elementCount = 0;
+            // Adding elements to the list
+            for (int i = 0; i < positionsOfBoard.GetLength(0); i++)
+            {
+                for (int j = 0; j < positionsOfBoard.GetLength(1); j++)
+                {
+                    if ((positionsOfBoard[i, j] == emptyBoardCharacter))
+                    {
+                        elementCount++;
+                    }
+                }
+            }
+            return elementCount;
+        }
+
         /// <summary>
         /// This method is used to make a random move for the current player.
         /// </summary>
@@ -137,6 +177,7 @@ namespace GameEnvironment
             // Getting current player
             char currentGamePlayer = CurrentPlayer;
             (byte i, byte j) = GetRandomPosition();
+            // Since new board positions are being returned
             BoardPositions[i, j] = currentGamePlayer;
         }
 

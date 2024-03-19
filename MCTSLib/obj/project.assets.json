@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "GameEnvironment/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/GameEnvironment.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameEnvironment.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameEnvironment/1.0.0": {
+      "type": "project",
+      "path": "../GameEnvironment/GameEnvironment.csproj",
+      "msbuildProject": "../GameEnvironment/GameEnvironment.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "GameEnvironment >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Sasan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLib\\MCTSLib.csproj",
+      "projectName": "MCTSLib",
+      "projectPath": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLib\\MCTSLib.csproj",
+      "packagesPath": "C:\\Users\\Sasan\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLib\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Sasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\GameEnvironment\\GameEnvironment.csproj": {
+              "projectPath": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\GameEnvironment\\GameEnvironment.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 ﻿using GameEnvironment;
+using MCTSLib;
 
 namespace GamePlay
 {
@@ -16,7 +17,7 @@ namespace GamePlay
             Console.WriteLine($"Continue Playing Game: {game.ContinueGamePlay}");
         }
 
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             Console.WriteLine("Hello, Welcome to AI Game of Tic Tac Toe");
             byte size = 0;
@@ -58,6 +59,48 @@ namespace GamePlay
             else if (!game.GameDraw)
             {
                 Console.WriteLine($"The Game is draw");
+            }
+        }*/
+
+        public static void Main(string[] args)
+        {
+            // iteration limit
+            int limitsForIteration = 5000;
+            // time limit
+            double limitedTime = 4;
+            Console.WriteLine("Hello, Welcome to AI Game of Tic Tac Toe");
+            // defining the board size
+            byte boardSize = 3;
+            // Creating an instance of the Tic Tac Toe game
+            TicTacToe game = new TicTacToe(boardSize);
+            Console.WriteLine($"Displaying the Initial Board Position:\n{game.DisplayBoard()}");
+            // Creating MCTS Instance for both the players
+            MCTS playerXMCTS = new MCTS(limitsForIteration: limitsForIteration, limitsForTime: limitedTime, boardSize: boardSize);
+            MCTS playerOMCTS = new MCTS(limitsForIteration: limitsForIteration, limitsForTime: limitedTime, boardSize: boardSize);
+
+            while (game.ContinueGamePlay)
+            {
+                // Displaying the current game player
+                Console.WriteLine($"Current Player: {game.CurrentPlayer}");
+                // MCTS Move
+                if (game.CurrentPlayer == 'X')
+                {
+                    Console.WriteLine("Making AI move for Player X: ");
+                    playerXMCTS.BuildTree(boardPositions: game.BoardPositions);
+                    // Updating the board positions using AI move
+                    game.BoardPositions = playerXMCTS.BestMove();
+                }
+                else if (game.CurrentPlayer == 'O')
+                {
+                    Console.WriteLine("Making AI move for Player O: ");
+                    playerOMCTS.BuildTree(boardPositions: game.BoardPositions);
+                    // Updating the board positions using AI move
+                    game.BoardPositions = playerOMCTS.BestMove();
+                }
+                // Dsiplaying game Board
+                Console.WriteLine($"Game Board Position:\n{game.DisplayBoard()}");
+                // Displaying the game state
+                Console.WriteLine($"Continue Playing Game: {game.ContinueGamePlay}");
             }
         }
     }
