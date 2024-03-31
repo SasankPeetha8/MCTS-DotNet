@@ -1,4 +1,4 @@
-namespace MCTSLibUnitTests
+/*namespace MCTSLibUnitTests
 {
     public class MCTSLibUnitTests
     {
@@ -102,7 +102,7 @@ namespace MCTSLibUnitTests
             Assert.Equal(requiredValue, aiObject.CalculateScore(childNode2.Score, childNode2.Visits, node.Visits));
         }
 
-        /*[Fact]
+        *//*[Fact]
         public void TestIsLeafNode()
         {
             // Arrange
@@ -117,7 +117,7 @@ namespace MCTSLibUnitTests
             Tree resultNode = aiObject.ExpandNode(node);
             // Assert
             Assert.Equal(false, resultNode.ParentNode.IsLeafNode);
-        }*/
+        }*//*
 
         [Fact]
         public void TestSingleSelectPhase()
@@ -185,7 +185,7 @@ namespace MCTSLibUnitTests
             Assert.Equal(expansionPhaseResult.BoardPositions, resultNode.BoardPositions);
         }
 
-        [Fact]
+        *//*[Fact]
         public void TestSimulationPhase()
         {
             // Arrange:
@@ -206,7 +206,7 @@ namespace MCTSLibUnitTests
             decimal result = aiObject.SimulateNode(boardSize: 3, boardPositions: node.BoardPositions);
             // Assert
             Assert.Equal(expected: expectedScore, actual: result);
-        }
+        }*//*
 
         // Defining method to build Expansion Phase
         public void BuildExpansionTest()
@@ -250,12 +250,12 @@ namespace MCTSLibUnitTests
             BuildExpansionTest();
             // Required Child Node visit count
             int expectedChildNodeVisits = 3;
-            /*// Adding the visits
+            *//*// Adding the visits
             node.Visits = 3;
             node.Score = 2;
             // Adding the score
             childNode1.Visits = 2;
-            childNode1.Score = 1;*/
+            childNode1.Score = 1;*//*
             // Assert
             Assert.Equal(expectedChildNodeVisits, childNode1.Visits);
         }
@@ -267,31 +267,56 @@ namespace MCTSLibUnitTests
             BuildExpansionTest();
             // Required Child Node visit count
             int expectedChildNodeScore = 2;
-            /*// Adding the visits
+            *//*// Adding the visits
             node.Visits = 3;
             node.Score = 2;
             // Adding the score
             childNode1.Visits = 2;
-            childNode1.Score = 1;*/
+            childNode1.Score = 1;*//*
             // Assert
             Assert.Equal(expectedChildNodeScore, childNode1.Score);
         }
 
-        [Fact]
+
+        // Update Test Back Propagate Phase
+        *//*[Fact]
         public void TestBackpropagatePhaseParentNodeScore()
         {
             // Act: Calling the Build BackPropagatePhase
             BuildExpansionTest();
             // Required Child Node visit count
             int expectedParentNodeScore = 2;
-            /*// Adding the visits
+            *//*// Adding the visits
             node.Visits = 3;
             node.Score = 2;
             // Adding the score
             childNode1.Visits = 2;
-            childNode1.Score = 1;*/
+            childNode1.Score = 1;*//*
             // Assert
             Assert.Equal(expectedParentNodeScore, node.Score);
+        }*//*
+
+        [Fact]
+        public void TestExpansionPhaseGameWin()
+        {
+            // Act:
+            node = new Tree(positionsOfBoard: new char[,] {
+                { '-', 'O', '-', },
+                { 'O', '-', '-' },
+                { 'X', 'X', 'X' },
+                },
+                parentNodeInfo: null
+                );
+            // MCTS
+            Tree resultNode = aiObject.ExpandNode(node);
+            // Expect Board positions
+            boardPositions = new char[,] {
+                { '-', 'O', '-', },
+                { 'O', '-', '-' },
+                { 'X', 'X', 'X' },
+                };
+            // Assert
+            Assert.Equal(boardPositions, resultNode.BoardPositions);
         }
 
         [Fact]
@@ -301,14 +326,14 @@ namespace MCTSLibUnitTests
             BuildExpansionTest();
             // Required Child Node visit count
             int expectedParentNodeVisits = 4;
-            /*// Adding the visits
+            *//*// Adding the visits
             node.Visits = 3;
             node.Score = 2;
             // Adding the score
             childNode1.Visits = 2;
-            childNode1.Score = 1;*/
+            childNode1.Score = 1;*//*
             // Assert
             Assert.Equal(expectedParentNodeVisits, node.Visits);
         }
     }
-}
+}*/

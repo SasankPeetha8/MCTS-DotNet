@@ -17,16 +17,18 @@ namespace MCTSLib
         // Defining the visits made to this node
         public int Visits = 0;
         // Defining the node score
-        public decimal Score = 0M;
+        public double Score = 0;
         // Defining bool to indicate if the node is a leaf node or not
         public bool IsLeafNode = true;
         // Defining list to store all the possible states
+        public Guid guid;
 
         public Tree(char[,] positionsOfBoard, Tree parentNodeInfo = null)
         {
             boardPositions = positionsOfBoard;
             parentNode = parentNodeInfo;
             childNodes = new List<Tree>();
+            guid = Guid.NewGuid();
         }
 
         public Tree ParentNode
@@ -46,5 +48,12 @@ namespace MCTSLib
             get { return childNodes; }
             set { childNodes = value; }
         }
+
+        public Guid GUID
+        {
+            get { return guid; }
+            set {  guid = value; }
+        }
+
     }
 }

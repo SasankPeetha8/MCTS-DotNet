@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NvYz1xzPntu2zDjhLwfkQmmpQQpskb6RNtBh7SJJQelFosbivOKwt8ojDU+/aSBLmakciGwiE7W+deMiO/B0HA==",
+  "dgSpecHash": "ZDlN1pUezzK/y3whBf8OUO/Wn+fn9FJqi84tKWOXt5wfczRbgoMKSQRZYniTwQmIXJuY1Av8urDjaoJGncyaxA==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\GamePlay.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sasan\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.0\\microsoft.dotnet.ilcompiler.8.0.0.nupkg.sha512",
-    "C:\\Users\\Sasan\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.0\\microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
-    "C:\\Users\\Sasan\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.0\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.0.nupkg.sha512"
+    "C:\\Users\\Sasan\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.3\\microsoft.dotnet.ilcompiler.8.0.3.nupkg.sha512",
+    "C:\\Users\\Sasan\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.3\\microsoft.net.illink.tasks.8.0.3.nupkg.sha512",
+    "C:\\Users\\Sasan\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.3\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -65,7 +65,7 @@ namespace GamePlay
         public static void Main(string[] args)
         {
             // iteration limit
-            int limitsForIteration = 5000;
+            int limitsForIteration = 2000;
             // time limit
             double limitedTime = 4;
             Console.WriteLine("Hello, Welcome to AI Game of Tic Tac Toe");
@@ -74,9 +74,13 @@ namespace GamePlay
             // Creating an instance of the Tic Tac Toe game
             TicTacToe game = new TicTacToe(boardSize);
             Console.WriteLine($"Displaying the Initial Board Position:\n{game.DisplayBoard()}");
-            // Creating MCTS Instance for both the players
+            // Creating an MCTS for the Player X
             MCTS playerXMCTS = new MCTS(limitsForIteration: limitsForIteration, limitsForTime: limitedTime, boardSize: boardSize);
+            // Creating an MCTS for the Player O
             MCTS playerOMCTS = new MCTS(limitsForIteration: limitsForIteration, limitsForTime: limitedTime, boardSize: boardSize);
+            // Saving the Game Tree for the player X
+            Tree PlayerXTree = null;
+            Tree PlayerOTree = null;
 
             while (game.ContinueGamePlay)
             {
@@ -86,22 +90,70 @@ namespace GamePlay
                 if (game.CurrentPlayer == 'X')
                 {
                     Console.WriteLine("Making AI move for Player X: ");
-                    playerXMCTS.BuildTree(boardPositions: game.BoardPositions);
+                    // Creating MCTS Instance for both the players
+                    // Building the Game Tree for the player X
+                    if (PlayerXTree == null)
+                    {
+                        // Building Game Tree if it's empty
+                        playerXMCTS.BuildTree(boardPositions: game.BoardPositions);
+                        // Stroring the game tree
+                        PlayerXTree = playerXMCTS.nodeData;
+                    }
+                    else
+                    {
+                        // Finding exisiting board state in the tree
+                        PlayerXTree = playerXMCTS.FindState(PlayerXTree, game.BoardPositions);
+                        // Building tree using the existing tree
+                        playerXMCTS.BuildTree(boardPositions: game.BoardPositions, existingTree: PlayerXTree);
+                    }
+                    // Displaying the Node Tree
+                    Console.WriteLine("%%%%%%%%%%%% NODE TREE for X %%%%%%%%%%");
+                    Console.WriteLine("graph TD;");
+                    playerXMCTS.DisplayTree();
                     // Updating the board positions using AI move
                     game.BoardPositions = playerXMCTS.BestMove();
+                    // Updating the game tree based on board position
+                    PlayerXTree = playerXMCTS.FindState(PlayerXTree, game.BoardPositions) ;
                 }
                 else if (game.CurrentPlayer == 'O')
                 {
                     Console.WriteLine("Making AI move for Player O: ");
-                    playerOMCTS.BuildTree(boardPositions: game.BoardPositions);
+                    // Creating MCTS Instance for both the players
+                    // Building the Game Tree for the player X
+                    if (PlayerOTree == null)
+                    {
+                        // Building Game Tree if it's empty
+                        playerOMCTS.BuildTree(boardPositions: game.BoardPositions);
+                        // Stroring the game tree
+                        PlayerOTree = playerOMCTS.nodeData;
+                    }
+                    else
+                    {
+                        // Finding exisiting board state in the tree
+                        PlayerOTree = playerOMCTS.FindState(PlayerOTree, game.BoardPositions);
+                        // Building tree using the existing tree
+                        playerOMCTS.BuildTree(boardPositions: game.BoardPositions, existingTree: PlayerOTree);
+                    }
+                    // Displaying the Node Tree
+                    Console.WriteLine("%%%%%%%%%%%% NODE TREE for O %%%%%%%%%%");
+                    playerOMCTS.DisplayTree();
                     // Updating the board positions using AI move
                     game.BoardPositions = playerOMCTS.BestMove();
+                    // Updating the game tree based on board position
+                    PlayerOTree = playerOMCTS.FindState(PlayerOTree, game.BoardPositions);
                 }
-                // Dsiplaying game Board
+                // Displaying game Board
                 Console.WriteLine($"Game Board Position:\n{game.DisplayBoard()}");
                 // Displaying the game state
                 Console.WriteLine($"Continue Playing Game: {game.ContinueGamePlay}");
+                // Displaying the game state
             }
+            // Displaying the game state
+            if (game.GameWin)
+            {
+                Console.WriteLine($"The game is won by Player {game.WinningPlayer}.");
+            }
+            Console.WriteLine("The game is draw.");
         }
     }
 }

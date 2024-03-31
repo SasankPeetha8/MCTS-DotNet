@@ -95,9 +95,9 @@ D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8
 D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\GameEnvironmentLibUnitTests.AssemblyInfo.cs
 D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\GameEnvironmentLibUnitTests.csproj.CoreCompileInputs.cache
 D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\GameEnvironmentLibUnitTests.sourcelink.json
-D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\GameEnvironmentLibUnitTests.csproj.CopyComplete
 D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\GameEnvironmentLibUnitTests.dll
 D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\refint\GameEnvironmentLibUnitTests.dll
 D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\GameEnvironmentLibUnitTests.pdb
 D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\GameEnvironmentLibUnitTests.genruntimeconfig.cache
 D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\ref\GameEnvironmentLibUnitTests.dll
+D:\GitHub\DotNet Projects\MCTS-DotNet\GameEnvironmentLibUnitTests\obj\Debug\net8.0\GameEnvi.67C83CE3.Up2Date
