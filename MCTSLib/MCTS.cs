@@ -5,7 +5,7 @@ namespace MCTSLib
     public class MCTS
     {
         // Defining an game object
-        public TicTacToe gameObject;
+        internal TicTacToe gameObject;
         // Defining the tree
         public Tree nodeData;
         // Defining the iteration limit
@@ -15,40 +15,47 @@ namespace MCTSLib
         // Exploration constant
         double explorationConstant = Math.Sqrt(2);
 
-        // Defining the constructor
+        /// <summary>
+        /// This constructor is used to create an instance of MCTS.
+        /// </summary>
+        /// <param name="limitsForIteration">This field is used to provide the iteration limit which is of type 'int'.</param>
+        /// <param name="limitsForTime">This field is used to provide the time limit which is of type 'double'.</param>
+        /// <param name="boardSize">This field is used to provide board size which is of type 'byte'.</param>
         public MCTS(int limitsForIteration, double limitsForTime, byte boardSize)
         {
-            // Iteration limit
+            // Initializing the iteration limit
             iterationLimit = limitsForIteration;
-            // Time Limit
+            // Initializing the time limit
             timeLimit = TimeSpan.FromSeconds(iterationLimit);
-            // Defining the board size
+            // Defining the new game object
             gameObject = new TicTacToe(boardSize);
-            // Creating a new node
         }
-
+        /// <summary>
+        /// This method is used to calculate the score of a node.
+        /// </summary>
+        /// <param name="childNodeScore">This argument requires the score of the node. It should be of type 'double'.</param>
+        /// <param name="childNodeVisits">This argument requires the visits of the node. It should be of type 'int'.</param>
+        /// <param name="nodeVisits">This argument requires the visits of the node's parent. It should be of type 'int'.</param>
+        /// <returns>This method returns the score value of the particular node which is of type 'double'.</returns>
         public double CalculateScore(double childNodeScore, int childNodeVisits, int nodeVisits)
         {
             // Calculating the exploitation value
             double exploitationValue = childNodeScore / childNodeVisits;
             // Calculating the exploration value
-            double N2NVisitsRatio = nodeVisits / childNodeVisits;
-            // Calculating the log10 value
-            double logValue = (Math.Log10(nodeVisits))/childNodeVisits;
-            //double logValue = Math.Log(N2NVisitsRatio);
-            double log_value = Math.Log10(logValue);
-            double ratio_value = log_value / childNodeVisits;
-            double sqrt_ratio = Math.Sqrt(ratio_value);
-            //decimal explorationValue = Convert.ToDecimal(explorationConstant * (Math.Sqrt(logValue)));
-            double explorationValue = explorationConstant * Math.Sqrt(logValue);
+            double explorationValue = explorationConstant * Math.Sqrt((Math.Log10(nodeVisits)) / childNodeVisits);
             // Displaying the score values
             Console.WriteLine($" ##########Child Score: {childNodeScore}, Child Visits: {childNodeVisits}, Parent Visits: {nodeVisits} ##########");
-            Console.WriteLine($"Exp Const: {explorationConstant}, Log Value: {log_value}, Ratio Value: {ratio_value}, Sqrt Ratio: {sqrt_ratio}");
+            //Console.WriteLine($"Exp Const: {explorationConstant}, Log Value: {log_value}, Ratio Value: {ratio_value}, Sqrt Ratio: {sqrt_ratio}");
             Console.WriteLine($" ##########Exploitation Value: {exploitationValue}, Exploration Value: {explorationValue} ##########");
-            // returing the total score
+            // Rouding the last two values and then returing the total score
             return  Math.Round((exploitationValue + explorationValue),2);
         }
 
+        /// <summary>
+        /// This method is used to display the Game Board information of the particular node
+        /// </summary>
+        /// <param name="positionsOnBoard">This argument requires the positions of the board which is a 2D array of type 'char'.</param>
+        /// <returns>This method returns the positions of the board in the form of string.</returns>
         public string DisplayNode(char[,] positionsOnBoard)
         {
             // Updating the positions on the board
@@ -151,58 +158,57 @@ namespace MCTSLib
             }
         }
 
-/*        public Tree SelectNode(Tree node)
+        /// <summary>
+        /// This method is used to check if two arrays are equal or not
+        /// </summary>
+        /// <param name="arrayToCompare">This argument requires an 2D array of type 'char' which is selected as the array to be compared.</param>
+        /// <param name="arrayToAgainst">This argument requires an 2D array of type 'char' which is selected as the array to be compared against another array.</param>
+        /// <returns>It returns a boolean value which indicates if the two arrays are equal or not.</returns>
+        internal bool ArraysAreEqual(char[,] arrayToCompare, char[,] arrayToAgainst)
         {
-            Console.WriteLine("------ Inside Select Node ------");
-            // Iterating until leaf node is reached
-            while (true)
-            {
-                if (node.IsLeafNode)
-                {
-                    // Adding the board positions of the node to the game object.
-                    gameObject.BoardPositions = node.BoardPositions;
-                    // Displaying the message.
-                    Console.WriteLine($"The following node is selected in Select Node Phase:\n{gameObject.DisplayBoard(node.BoardPositions)}");
-                    // Returning the leaf node
-                    return node;
-                }
-                else
-                {
-                    node = SingleSelect(node);
-                }
-            }
-        }*/
-
-        public bool ArraysAreEqual(char[,] arrayToCompare, char[,] arrayToAgainst)
-        {
+            // Checking if the length of the 2D arrays are equal or not.
             if ((arrayToCompare.GetLength(0) == arrayToAgainst.GetLength(0)) && (arrayToCompare.GetLength(1) == arrayToAgainst.GetLength(1)))
             {
+                // Iterating through 2D array i.e., rows
                 for (int i = 0; i < arrayToCompare.GetLength(0); i++)
                 {
+                    // Iterating through 2D array i.e., columns
                     for (int j = 0; j < arrayToCompare.GetLength(1); j++)
                     {
+                        // Checking if two elements are not equal
                         if (arrayToCompare[i, j] != arrayToAgainst[i, j])
                         {
+                            // If two elements are not equal, then return false
                             return false;
                         }
                     }
                 }
+                // Returning true as all the elements are equal
                 return true;
             }
+            // Returning false as the lenghts of the two arrays aren't equal
             else
             {
                 return false;
             }
         }
 
+        /// <summary>
+        /// This method is used to convert the game board positions into a string.
+        /// </summary>
+        /// <param name="positionsOfBoard">This argument requires the positions of the game board which is a 2D array of type 'char'.</param>
+        /// <returns>It returns a string value where all the values of the array are concatenated.</returns>
         public string ConvertToString(char[,] positionsOfBoard)
         {
             // Defining a new string
             string boardString = "";
+            // Iterating through the rows
             for(int i = 0;i < positionsOfBoard.GetLength(0);i++)
             {
+                // Iterating through the columns
                 for (int j = 0; j < positionsOfBoard.GetLength(1); j++)
                 {
+                    // Adding the element to the string
                     boardString = boardString + positionsOfBoard[i,j];
                 }
             }
@@ -490,33 +496,47 @@ namespace MCTSLib
             throw new Exception(message: $"{gameObject.DisplayBoard(positionsOfBoard)}\nInvalid Board Position not found in the tree.");
         }
 
-        public void DisplayTree(Tree parentNode = null, Tree childNode = null)
+        /// <summary>
+        /// This method is used to display the Decision Tree created by the MCTS
+        /// </summary>
+        /// <param name="childNode">This argument requires the child node information which is of type 'Tree'. The default value of the paremeter is null.</param>
+        public void DisplayTree(Tree? childNode = null)
         {
+            Console.WriteLine("---------- Inside Display Tree ----------");
+            // Initialising the child node as the existing node if the child value is null.
             if (childNode == null)
             {
                 childNode = nodeData;
             }
+            // Iterating through all the child nodes in the tree
             foreach (Tree childTree in childNode.ChildNodes)
             {
-                // Defining the parent string
+                // Defining the parent string for the mermaid diagram
                 string parentString = $"{childTree.ParentNode.GUID}(S:{childTree.ParentNode.Score}, V:{childTree.ParentNode.Visits}\n{gameObject.DisplayBoard(childTree.ParentNode.BoardPositions)})";
-                // Child String
+                // Defining the child string for the mermaid diagram
                 string childString = $"{childTree.GUID}(S:{childTree.Score}, V:{childTree.Visits}\n{gameObject.DisplayBoard(childTree.BoardPositions)})";
                 // Displaying the mermiad string
                 Console.WriteLine($"    {parentString}--->{childString}");
-
+                // Checking if the total number of child nodes are greater than 0
                 if (childTree.ChildNodes.Count > 0)
                 {
-                    DisplayTree(parentNode: null, childNode: childTree);
+                    // Displaying the Decision Tree for the child nodes
+                    DisplayTree(childNode: childTree);
                 }
             }
+            Console.WriteLine("---------- Outside Display Tree ----------");
         }
 
+        /// <summary>
+        /// This method is used to fetch the best move in the decision tree
+        /// </summary>
+        /// <returns>It returns the best move game board positions which is a 2D array of type 'char'.</returns>
         public char[,] BestMove()
         {
-            Console.WriteLine("------ Inside Best Move Phase ------");
+            Console.WriteLine("---------- Inside Best Move Phase ----------");
             char[,] bestFoundPosition =  SingleSelect(node: nodeData).BoardPositions;
             Console.WriteLine($"The following node is selected as best move:\n{DisplayNode(bestFoundPosition)}");
+            Console.WriteLine("---------- Outside Best Move Phase ----------");
             return bestFoundPosition;
         }
     }

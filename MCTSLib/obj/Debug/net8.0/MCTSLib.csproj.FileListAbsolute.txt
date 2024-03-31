@@ -9,8 +9,8 @@ D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.AssemblyI
 D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.AssemblyInfo.cs
 D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.csproj.CoreCompileInputs.cache
 D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.sourcelink.json
+D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.csproj.Up2Date
 D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.dll
 D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\refint\MCTSLib.dll
 D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.pdb
 D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\ref\MCTSLib.dll
-D:\GitHub\DotNet Projects\MCTS-DotNet\MCTSLib\obj\Debug\net8.0\MCTSLib.csproj.Up2Date

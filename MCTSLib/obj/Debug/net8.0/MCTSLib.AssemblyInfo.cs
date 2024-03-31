@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MCTSLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33a859d076004efd9e9d4187174b3c14f89e9004")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+121a280e0e85997a09e3d86966cda5dac584e4cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("MCTSLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MCTSLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

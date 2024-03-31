@@ -12,7 +12,7 @@ namespace MCTSLib
     public class Tree
     {
         // Defining Parent Node.
-        internal Tree parentNode;
+        internal Tree? parentNode;
         // Defining the current game board positions at this node.
         internal char[,] boardPositions;
         // Defining children nodes for the current node
@@ -31,7 +31,7 @@ namespace MCTSLib
         /// </summary>
         /// <param name="positionsOfBoard">This parameter is used to define the game board positions.</param>
         /// <param name="parentNodeInfo">This parameter is used to define the information of the parent node.</param>
-        public Tree(char[,] positionsOfBoard, Tree parentNodeInfo = null)
+        public Tree(char[,] positionsOfBoard, Tree? parentNodeInfo = null)
         {
             // Defining the board positions
             boardPositions = positionsOfBoard;
