@@ -3,20 +3,26 @@
   "WorkspaceRootPath": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E31CEA1E-FB8B-4488-AC25-5C83E345C774}|GamePlay.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\mcts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E31CEA1E-FB8B-4488-AC25-5C83E345C774}|GamePlay.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3210CD85-5205-4334-9890-C32F3B72AF03}|..\\MCTSLib\\MCTSLib.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\mctslib\\tree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3210CD85-5205-4334-9890-C32F3B72AF03}|..\\MCTSLib\\MCTSLib.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\mctslib\\mcts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3210CD85-5205-4334-9890-C32F3B72AF03}|..\\MCTSLib\\MCTSLib.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\mctslib\\tree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08FFC8CB-E200-4299-9911-3C9FE34BC9E0}|..\\GameEnvironment\\GameEnvironment.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\gameenvironment\\tictactoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A24F0C7A-0E04-46F6-B259-902039B47258}|..\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\gameenvironmentlibunittests\\gameenvironmentlibunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A24F0C7A-0E04-46F6-B259-902039B47258}|..\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\gameenvironmentlibunittests\\gameenvironmentlibunittests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1285A2E6-539C-4C8F-A2CD-936884609F64}|..\\MCTSLibUnitTests\\MCTSLibUnitTests.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\mctslibunittests\\mctslibunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E31CEA1E-FB8B-4488-AC25-5C83E345C774}|GamePlay.csproj|d:\\github\\dotnet projects\\mcts-dotnet\\mcts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E31CEA1E-FB8B-4488-AC25-5C83E345C774}|GamePlay.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +32,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 486,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MCTSLibUnitTests.cs",
-              "DocumentMoniker": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLibUnitTests\\MCTSLibUnitTests.cs",
-              "RelativeDocumentMoniker": "..\\MCTSLibUnitTests\\MCTSLibUnitTests.cs",
-              "ToolTip": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLibUnitTests\\MCTSLibUnitTests.cs",
-              "RelativeToolTip": "..\\MCTSLibUnitTests\\MCTSLibUnitTests.cs",
-              "ViewState": "AQIAADwBAAAAAAAAAAAAwFIBAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T21:02:59.286Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -49,7 +42,7 @@
         },
         {
           "DockedWidth": 760,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -59,46 +52,86 @@
               "RelativeDocumentMoniker": "..\\MCTSLib\\MCTS.cs",
               "ToolTip": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLib\\MCTS.cs",
               "RelativeToolTip": "..\\MCTSLib\\MCTS.cs",
-              "ViewState": "AQIAAPQBAAAAAAAAAAAqwAsCAAAAAAAA",
+              "ViewState": "AQIAAOYBAAAAAAAAAAAvwPUBAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T00:49:15.294Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "GameEnvironmentLibUnitTests.cs",
+              "DocumentMoniker": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.cs",
+              "RelativeDocumentMoniker": "..\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.cs",
+              "ToolTip": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.cs",
+              "RelativeToolTip": "..\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T00:51:10.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameEnvironmentLibUnitTests",
+              "DocumentMoniker": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.csproj",
+              "RelativeDocumentMoniker": "..\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.csproj",
+              "ToolTip": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.csproj",
+              "RelativeToolTip": "..\\GameEnvironmentLibUnitTests\\GameEnvironmentLibUnitTests.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-31T00:51:03.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MCTSLibUnitTests.cs",
+              "DocumentMoniker": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLibUnitTests\\MCTSLibUnitTests.cs",
+              "RelativeDocumentMoniker": "..\\MCTSLibUnitTests\\MCTSLibUnitTests.cs",
+              "ToolTip": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLibUnitTests\\MCTSLibUnitTests.cs",
+              "RelativeToolTip": "..\\MCTSLibUnitTests\\MCTSLibUnitTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T00:48:24.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TicTacToe.cs",
               "DocumentMoniker": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\GameEnvironment\\TicTacToe.cs",
               "RelativeDocumentMoniker": "..\\GameEnvironment\\TicTacToe.cs",
               "ToolTip": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\GameEnvironment\\TicTacToe.cs",
               "RelativeToolTip": "..\\GameEnvironment\\TicTacToe.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAkwHYAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T01:00:13.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Tree.cs",
               "DocumentMoniker": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLib\\Tree.cs",
               "RelativeDocumentMoniker": "..\\MCTSLib\\Tree.cs",
               "ToolTip": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTSLib\\Tree.cs",
               "RelativeToolTip": "..\\MCTSLib\\Tree.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAIwBMAAAAfAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEkAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T00:56:06.8Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\GitHub\\DotNet Projects\\MCTS-DotNet\\MCTS\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAJEAAAAAAAAAAAAAAJ8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T00:49:04.37Z",
               "EditorCaption": ""
